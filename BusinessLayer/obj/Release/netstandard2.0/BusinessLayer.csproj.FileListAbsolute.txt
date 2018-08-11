@@ -1,0 +1,16 @@
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\bin\Release\netstandard2.0\BusinessLayer.deps.json
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\bin\Release\netstandard2.0\BusinessLayer.dll
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\bin\Release\netstandard2.0\BusinessLayer.pdb
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\bin\Release\netstandard2.0\DataLayer.dll
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\bin\Release\netstandard2.0\EntityLayer.dll
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\bin\Release\netstandard2.0\LibraryLayer.dll
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\bin\Release\netstandard2.0\DataLayer.pdb
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\bin\Release\netstandard2.0\EntityLayer.pdb
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\bin\Release\netstandard2.0\LibraryLayer.pdb
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.csprojAssemblyReference.cache
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.csproj.CoreCompileInputs.cache
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.AssemblyInfoInputs.cache
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.AssemblyInfo.cs
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.csproj.CopyComplete
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.dll
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.pdb
