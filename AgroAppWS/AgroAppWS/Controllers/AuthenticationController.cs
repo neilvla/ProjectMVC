@@ -13,16 +13,16 @@ namespace AgroAppWS.Controllers
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
-        [HttpGet("ValidateUser/{email}/{pass}")]
-        public User Validate(string email, string pass)
+        //[HttpPost]
+        //[ActionName("Post")]
+        //public ActionResult<User> validateUser([FromBody]User u)
+        //{
+        //    return UserBL.Instance.validateUser(u.Email, u.Password);
+        //}
+        [HttpPost("validateUser")]
+        public ActionResult<User> validateUser(User u)
         {
-            return UserBL.Instance.validateUser(email, pass);
-        }
-
-        [HttpPost("MyValidate")]
-        public string MyValidate(string email, string pass)
-        {
-            return "Hola";//UserBL.Instance.validateUser(email, pass);
+            return UserBL.Instance.validateUser(u.Email, u.Password);
         }
     }
 }
