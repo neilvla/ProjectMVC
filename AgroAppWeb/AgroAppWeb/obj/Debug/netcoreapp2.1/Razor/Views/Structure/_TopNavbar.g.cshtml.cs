@@ -72,7 +72,7 @@ using AgroAppWeb.Helpers;
             ");
             EndContext();
             BeginContext(375, 292, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "279090cefe2a4d29894d41fd05573d66", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7dd383e42a9c4ae6a2dc142bf0731a8d", async() => {
                 BeginContext(446, 214, true);
                 WriteLiteral("\r\n                <div class=\"form-group\">\r\n                    <input type=\"text\" placeholder=\"Search for something...\" class=\"form-control\" name=\"top-search\" id=\"top-search\">\r\n                </div>\r\n            ");
                 EndContext();
@@ -129,7 +129,7 @@ using AgroAppWeb.Helpers;
                                 ");
             EndContext();
             BeginContext(1395, 58, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7cfe786171f5458994db20bfcb56d2fa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "bb1cd4938ae54cc3943a4ec97e366039", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -162,7 +162,7 @@ using AgroAppWeb.Helpers;
                                 ");
             EndContext();
             BeginContext(2160, 58, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "d85e6954d29a4bd5a594df59725a97ec", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "efb5fa8796374917b99d9cecd6d26d03", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -195,7 +195,7 @@ using AgroAppWeb.Helpers;
                                 ");
             EndContext();
             BeginContext(2940, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "abb87e3bdb164b73abd48169c1dde461", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e306644ba1384aefb02e6c10bcbec5d2", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -279,7 +279,7 @@ using AgroAppWeb.Helpers;
                 ");
             EndContext();
             BeginContext(5872, 143, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "101c5c8d4cc746faa5e0434655d790a4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "71926c214f574ed2b2b7aed94f18ea70", async() => {
                 BeginContext(5927, 84, true);
                 WriteLiteral("\r\n                    <i class=\"fa fa-sign-out\"></i> Cerrar Sesión\r\n                ");
                 EndContext();

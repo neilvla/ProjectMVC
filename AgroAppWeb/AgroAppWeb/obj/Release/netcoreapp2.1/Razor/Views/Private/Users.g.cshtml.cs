@@ -95,7 +95,7 @@ WriteAttributeValue("", 344, Url.Action("Dashboard_1", "Dashboards"), 344, 40, f
                             ");
             EndContext();
             BeginContext(1210, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21f0edc5aed845f6adab79fc79696fdb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "170a7c988ee14395917115fb088809b9", async() => {
                 BeginContext(1259, 7, true);
                 WriteLiteral("Agregar");
                 EndContext();
@@ -218,7 +218,7 @@ WriteAttributeValue("", 3429, Url.Content("~/StaticFiles/agroappresource/images/
             WriteLiteral("\r\n                                    </td>\r\n                                    <td>\r\n                                        ");
             EndContext();
             BeginContext(3842, 110, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6e74580e51694e6aab49e2936e903ca0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1c4ce5cd9d224f7b9f5b3d92a7210e57", async() => {
                 BeginContext(3922, 26, true);
                 WriteLiteral("<i class=\"fa fa-edit\"></i>");
                 EndContext();
@@ -254,7 +254,7 @@ WriteAttributeValue("", 3429, Url.Content("~/StaticFiles/agroappresource/images/
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(3994, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc0b56650c464d6ca4fbb4f486c2c2dd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21e6c58b87894ad9b989d9e3bc1343df", async() => {
                 BeginContext(4072, 27, true);
                 WriteLiteral("<i class=\"fa fa-trash\"></i>");
                 EndContext();

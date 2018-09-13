@@ -65,7 +65,7 @@ using AgroAppWeb.Helpers;
             WriteLiteral("\r\n<div class=\"loginColumns animated fadeInDown\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md-3\"></div>\r\n        <div class=\"col-md-6\">\r\n            <div class=\"ibox-content\">\r\n                <div class=\"row text-center\">\r\n                    ");
             EndContext();
             BeginContext(348, 66, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "afea75a9a5a14f03831027bf4f4ad7a8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "502d724455d841618301edfaf2a1ff3e", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -84,7 +84,7 @@ using AgroAppWeb.Helpers;
             WriteLiteral("\r\n                </div>\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(495, 616, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d332437192d845679ccbcacc12736262", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e160e15dc400441f919d847324e06da6", async() => {
                 BeginContext(547, 557, true);
                 WriteLiteral(@"
                         <div class=""form-group"">

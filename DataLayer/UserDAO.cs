@@ -137,7 +137,7 @@ namespace DataLayer
             return res;
         }
 
-        public User validate(string email, string pass)
+        public User validate(ref BaseResult baseResult, string email, string pass)
         {
             MySqlConnection cn = Connection.getConnection();
             User u = null;
@@ -170,7 +170,7 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-                throw;
+                baseResult = new BaseResult((Int16)Resource.EnumTypeResult.Error, "Ha ocurrido un error", ex);
             }
             finally
             {

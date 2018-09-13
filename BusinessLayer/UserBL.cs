@@ -1,5 +1,6 @@
 ﻿using DataLayer;
 using EntityLayer;
+using LibraryLayer;
 using System;
 using System.Collections.Generic;
 
@@ -18,9 +19,9 @@ namespace BusinessLayer
             }
         }
 
-        public User validateUser(string email, string pass)
+        public User validateUser(ref BaseResult baseResult, string email, string pass)
         {
-            return UserDAO.Instance.validate(email, pass);
+            return UserDAO.Instance.validate(ref baseResult, email, pass);
         }
 
         public User get(int id)

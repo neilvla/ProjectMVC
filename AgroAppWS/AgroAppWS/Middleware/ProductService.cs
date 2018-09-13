@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,18 +11,39 @@ namespace AgroAppWS.Middleware
     public static class ProductService
     {
 
-        public static IServiceCollection AddRegistration(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddRegistration(this IServiceCollection services, IConfiguration configuration, IHostingEnvironment env)
         {
-            services.AddSingleton<IFileServerProvider>(new FileServerProvider(
-       new List<FileServerOptions>
-       {
-            new FileServerOptions
+            //Development
+            if (env.IsDevelopment())
             {
-                FileProvider = new PhysicalFileProvider("C:\\recursos\\"),
-                RequestPath = new PathString("/StaticFiles"),
-                EnableDirectoryBrowsing = true // you make this true or false.
+                services.AddSingleton<IFileServerProvider>(new FileServerProvider(
+               new List<FileServerOptions>
+               {
+                    new FileServerOptions
+                    {
+                        FileProvider = new PhysicalFileProvider("C:\\recursos\\"),
+                        //FileProvider = new PhysicalFileProvider("H:\\root\\home\\neilvla-001\\www\\site1\\recursos\\"),
+                        RequestPath = new PathString("/StaticFiles"),
+                        EnableDirectoryBrowsing = true // you make this true or false.
+                    }
+
+               }));
             }
-       }));
+            if (env.IsProduction())
+            {
+                services.AddSingleton<IFileServerProvider>(new FileServerProvider(
+               new List<FileServerOptions>
+               {
+                    new FileServerOptions
+                    {
+                        FileProvider = new PhysicalFileProvider("H:\\root\\home\\neilvla-001\\www\\site1\\recursos\\"),
+                        //FileProvider = new PhysicalFileProvider("C:\\recursos\\"),
+                        RequestPath = new PathString("/StaticFiles"),
+                        EnableDirectoryBrowsing = true // you make this true or false.
+                    }
+
+               }));
+            }
             return services;
         }
     }

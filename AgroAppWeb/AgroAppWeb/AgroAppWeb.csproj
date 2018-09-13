@@ -18,4 +18,13 @@
     <Folder Include="wwwroot\template\img\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Private\StageForm.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Private\Stages.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>

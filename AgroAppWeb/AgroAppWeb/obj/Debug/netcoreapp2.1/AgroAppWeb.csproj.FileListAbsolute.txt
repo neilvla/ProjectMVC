@@ -41,3 +41,7 @@ F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\bin\Debug\netcoreapp
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\AgroAppWeb.Views.pdb
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\AgroAppWeb.csproj.CopyComplete
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\PhaseForm.g.cshtml.cs
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\Tasks.g.cshtml.cs
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\TaskForm.g.cshtml.cs
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\StageForm.g.cshtml.cs
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\Stages.g.cshtml.cs

@@ -77,6 +77,51 @@ namespace AgroAppWeb.Controllers
             return RedirectToAction("PhaseForm");
         }
 
+        [ActionName("Tasks")]
+        public IActionResult TaskView()
+        {
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            ViewData["admin"] = a;
+            List<EntityLayer.Task> tasks = TaskBL.Instance.list();
+            return View(tasks);
+        }
+
+        [ActionName("TaskForm")]
+        public IActionResult TaskFormView(int id)
+        {
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            ViewData["admin"] = a;
+            EntityLayer.Task t = TaskBL.Instance.get(id);
+            return View(t);
+        }
+
+        [ActionName("Stages")]
+        public IActionResult StageView()
+        {
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            ViewData["admin"] = a;
+            List<Stage> phases = StageBL.Instance.list();
+            return View(phases);
+        }
+
+        [ActionName("StageForm")]
+        public IActionResult StageFormView(int id)
+        {
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            ViewData["admin"] = a;
+            Stage p = StageBL.Instance.get(id);
+            return View(p);
+        }
+
+        public IActionResult StageSave(Stage p)
+        {
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            p.CreatedBy = a.Id;
+            p.Image = uploadImage(p.Image);
+            StageBL.Instance.save(p);
+            return RedirectToAction("StageForm");
+        }
+
         private string uploadImage(string image)
         {
             var newFileName = image;

@@ -10,9 +10,9 @@ F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\LibraryLayer\obj\Debug\netstand
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\LibraryLayer\bin\Debug\netstandard2.0\LibraryLayer.deps.json
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\LibraryLayer\bin\Debug\netstandard2.0\LibraryLayer.dll
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\LibraryLayer\bin\Debug\netstandard2.0\LibraryLayer.pdb
-F:\Tesis\AgroApp-Tesis\AgroAppWebSite\LibraryLayer\obj\Debug\netstandard2.0\LibraryLayer.csprojAssemblyReference.cache
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\LibraryLayer\obj\Debug\netstandard2.0\LibraryLayer.csproj.CoreCompileInputs.cache
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\LibraryLayer\obj\Debug\netstandard2.0\LibraryLayer.AssemblyInfoInputs.cache
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\LibraryLayer\obj\Debug\netstandard2.0\LibraryLayer.AssemblyInfo.cs
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\LibraryLayer\obj\Debug\netstandard2.0\LibraryLayer.dll
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\LibraryLayer\obj\Debug\netstandard2.0\LibraryLayer.pdb
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\LibraryLayer\obj\Debug\netstandard2.0\LibraryLayer.csprojAssemblyReference.cache

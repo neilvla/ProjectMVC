@@ -1,9 +1,9 @@
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\EntityLayer\bin\Debug\netstandard2.0\EntityLayer.deps.json
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\EntityLayer\bin\Debug\netstandard2.0\EntityLayer.dll
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\EntityLayer\bin\Debug\netstandard2.0\EntityLayer.pdb
-F:\Tesis\AgroApp-Tesis\AgroAppWebSite\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.csprojAssemblyReference.cache
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.csproj.CoreCompileInputs.cache
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.AssemblyInfoInputs.cache
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.AssemblyInfo.cs
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.dll
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.pdb
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.csprojAssemblyReference.cache
