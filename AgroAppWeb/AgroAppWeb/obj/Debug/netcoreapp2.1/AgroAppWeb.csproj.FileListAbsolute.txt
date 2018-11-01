@@ -45,3 +45,7 @@ F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\TaskForm.g.cshtml.cs
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\StageForm.g.cshtml.cs
 F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\Stages.g.cshtml.cs
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\IllnessForm.g.cshtml.cs
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\Illnesses.g.cshtml.cs
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\ControlsequenceForm.g.cshtml.cs
+F:\Tesis\AgroApp-Tesis\AgroAppWebSite\AgroAppWeb\AgroAppWeb\obj\Debug\netcoreapp2.1\Razor\Views\Private\Controlsequence.g.cshtml.cs

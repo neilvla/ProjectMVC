@@ -29,20 +29,26 @@ namespace DataLayer
 
             try
             {
-                MySqlCommand cmd = new MySqlCommand("Phase_GetById", cn);
+                MySqlCommand cmd = new MySqlCommand("Task_GetById", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("pid", id);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 t = null;
                 if (reader.Read())
                 {
+                    Stage stage = new Stage()
+                    {
+                        Id = reader.GetInt32("stageId")
+                    };
+
                     t = new Task()
                     {
                         Id = reader.GetInt32("id"),
                         Name = reader.GetString("name"),
                         Description = reader.GetString("description"),
                         //Image = reader.GetString("image"),
-                        Status = reader.GetByte("status")
+                        Stage = stage,
+                        Status = reader.GetInt16("status")
                     };
                 }
             }
@@ -71,12 +77,17 @@ namespace DataLayer
                 Task t = null;
                 while (reader.Read())
                 {
+                    Stage stage = new Stage()
+                    {
+                        Name = reader.GetString("stagename")
+                    };
                     t = new Task()
                     {
                         Id = reader.GetInt32("id"),
                         Name = reader.GetString("name"),
                         Description = reader.GetString("description"),
                         //Image = reader.GetString("image"),
+                        Stage = stage,
                         CreatedDate = reader.GetDateTime("createddate")
                     };
                     tasks.Add(t);
@@ -93,9 +104,31 @@ namespace DataLayer
             return tasks;
         }
 
-        public bool save(Task obj)
+        public bool save(ref BaseResult baseResult, Task obj)
         {
-            throw new NotImplementedException();
+            bool res = false;
+            try
+            {
+                MySqlConnection cn = Connection.getConnection();
+                MySqlCommand cmd = new MySqlCommand("Task_Save", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("pid", obj.Id);
+                cmd.Parameters.AddWithValue("pname", obj.Name);
+                cmd.Parameters.AddWithValue("pdescription", obj.Description);
+                cmd.Parameters.AddWithValue("pstageid", obj.Stage.Id);
+                cmd.Parameters.AddWithValue("pcreatedby", obj.CreatedBy);
+                cmd.Parameters.AddWithValue("pstatus", obj.Status);
+
+                cmd.ExecuteNonQuery();
+                res = true;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return res;
         }
     }
 }

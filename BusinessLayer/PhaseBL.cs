@@ -1,5 +1,6 @@
 ﻿using DataLayer;
 using EntityLayer;
+using LibraryLayer;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,9 +29,9 @@ namespace BusinessLayer
         {
             return PhaseDAO.Instance.get(id);
         }
-        public bool save(Phase obj)
+        public bool save(ref BaseResult baseResult, Phase obj)
         {
-            return PhaseDAO.Instance.save(obj);
+            return PhaseDAO.Instance.save(ref baseResult, obj);
         }
     }
 }

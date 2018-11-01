@@ -34,9 +34,9 @@ namespace BusinessLayer
             return UserDAO.Instance.list();
         }
 
-        public bool save(User obj)
+        public bool save(ref BaseResult baseResult, User obj)
         {
-            return UserDAO.Instance.save(obj);
+            return UserDAO.Instance.save(ref baseResult, obj);
         }
     }
 }

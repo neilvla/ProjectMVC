@@ -8,5 +8,6 @@ namespace EntityLayer
     {
         public string Name { get; set; }
         public string Description { get; set; }
+        public Stage Stage { get; set; }
     }
 }

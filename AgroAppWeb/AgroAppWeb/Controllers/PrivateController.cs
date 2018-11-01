@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 using AgroAppWeb.Middleware;
 using BusinessLayer;
 using EntityLayer;
+using LibraryLayer;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AgroAppWeb.Controllers
 {
@@ -43,10 +45,13 @@ namespace AgroAppWeb.Controllers
 
         public IActionResult UserSave(User u)
         {
+            BaseResult baseResult = new BaseResult();
             Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
             u.CreatedBy = a.Id;
-            u.Image = uploadImage(u.Image);
-            UserBL.Instance.save(u);
+            if (!u.Image.Equals(""))
+                u.Image = uploadImage(u.Image, "users");
+
+            UserBL.Instance.save(ref baseResult, u);
             return RedirectToAction("UserForm");
         }
 
@@ -70,10 +75,12 @@ namespace AgroAppWeb.Controllers
 
         public IActionResult PhaseSave(Phase p)
         {
+            BaseResult baseResult = new BaseResult();
             Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
             p.CreatedBy = a.Id;
-            p.Image = uploadImage(p.Image);
-            PhaseBL.Instance.save(p);
+            if (!p.Image.Equals(""))
+                p.Image = uploadImage(p.Image, "phases");
+            PhaseBL.Instance.save(ref baseResult, p);
             return RedirectToAction("PhaseForm");
         }
 
@@ -92,7 +99,22 @@ namespace AgroAppWeb.Controllers
             Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
             ViewData["admin"] = a;
             EntityLayer.Task t = TaskBL.Instance.get(id);
+            IEnumerable<SelectListItem> stages = StageBL.Instance.list().Select(x => new SelectListItem
+            {
+                Value = x.Id.ToString(),
+                Text = x.Name
+            });
+            ViewData["Stages"] = stages;
             return View(t);
+        }
+
+        public IActionResult TaskSave(EntityLayer.Task t)
+        {
+            BaseResult baseResult = new BaseResult();
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            t.CreatedBy = a.Id;
+            TaskBL.Instance.save(ref baseResult, t);
+            return RedirectToAction("TaskForm");
         }
 
         [ActionName("Stages")]
@@ -115,20 +137,87 @@ namespace AgroAppWeb.Controllers
 
         public IActionResult StageSave(Stage p)
         {
+            BaseResult baseResult = new BaseResult();
             Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
             p.CreatedBy = a.Id;
-            p.Image = uploadImage(p.Image);
-            StageBL.Instance.save(p);
+            if (!p.Image.Equals(""))
+                p.Image = uploadImage(p.Image, "stages");
+            StageBL.Instance.save(ref baseResult, p);
             return RedirectToAction("StageForm");
         }
 
-        private string uploadImage(string image)
+        [ActionName("Illnesses")]
+        public IActionResult IllnessView()
+        {
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            ViewData["admin"] = a;
+            List<Illness> illnesses = IllnessBL.Instance.list();
+            return View(illnesses);
+        }
+
+        [ActionName("IllnessForm")]
+        public IActionResult IllnessFormView(int id)
+        {
+            Administrator u = HttpContext.Session.GetObject<Administrator>("UserSession");
+            ViewData["admin"] = u;
+            Illness illness = IllnessBL.Instance.get(id);
+            return View(illness);
+        }
+        public IActionResult IllnessSave(Illness i)
+        {
+            BaseResult baseResult = new BaseResult();
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            i.CreatedBy = a.Id;
+            if (!i.Image.Equals(""))
+                i.Image = uploadImage(i.Image, "illnesses");
+            IllnessBL.Instance.save(ref baseResult, i);
+            return RedirectToAction("IllnessForm");
+        }
+        public IActionResult ControlSequence()
+        {
+            Administrator u = HttpContext.Session.GetObject<Administrator>("UserSession");
+            ViewData["admin"] = u;
+            List<ControlSequence> controlSequences = CropControlBL.Instance.getControlSequences();
+            return View(controlSequences);
+        }
+        public IActionResult ControlSequenceForm()
+        {
+            Administrator u = HttpContext.Session.GetObject<Administrator>("UserSession");
+            ViewData["admin"] = u;
+            IEnumerable<SelectListItem> phases = PhaseBL.Instance.list().Select(x => new SelectListItem
+            {
+                Value = x.Id.ToString(),
+                Text = x.Name
+            });
+            ViewData["Phases"] = phases;
+            IEnumerable<SelectListItem> stages = StageBL.Instance.list().Select(x => new SelectListItem
+            {
+                Value = x.Id.ToString(),
+                Text = x.Name
+            });
+            ViewData["Stages"] = stages;
+            IEnumerable<SelectListItem> tasks = TaskBL.Instance.list().Select(x => new SelectListItem
+            {
+                Value = x.Id.ToString(),
+                Text = x.Name
+            });
+            ViewData["Tasks"] = tasks;
+            return View();
+        }
+
+        public IActionResult SaveSequence(int phaseid, int stageid, int taskid)
+        {
+            BaseResult baseResult = new BaseResult();
+            CropControlBL.Instance.saveControlSequence(ref baseResult, phaseid, stageid, taskid);
+            return RedirectToAction("Controlsequence");
+        }
+        private string uploadImage(string image, string type)
         {
             var newFileName = image;
             string PathDB = string.Empty;
             if (HttpContext.Request.Form.Files != null)
             {
-                var fileName = string.Empty;                
+                var fileName = string.Empty;
 
                 var files = HttpContext.Request.Form.Files;
 
@@ -150,7 +239,8 @@ namespace AgroAppWeb.Controllers
 
                         // Combines two strings into a path.
                         //fileName = Path.Combine(_environment.WebRootPath, "images") + $@"\{newFileName}";
-                        fileName = "C:\\recursos\\agroappresource\\images\\users" + $@"\{newFileName}";
+                        //fileName = "C:\\recursos\\agroappresource\\images\\" + type + $@"\{newFileName}";
+                        fileName = "H:\\root\\home\\neilvla-001\\www\\site1\\recursos\\agroappresource\\images\\" + type + $@"\{newFileName}";
 
                         // if you want to store path of folder in database
                         PathDB = "" + newFileName;

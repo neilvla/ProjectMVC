@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EntityLayer
 {
-    class IncidenceDetail
+    public class IncidenceDetail
     {
         public int Id { get; set; }
         public string Image { get; set; }

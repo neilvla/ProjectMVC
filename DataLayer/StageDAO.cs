@@ -94,7 +94,7 @@ namespace DataLayer
             return stages;
         }
 
-        public bool save(Stage obj)
+        public bool save(ref BaseResult baseResult, Stage obj)
         {
             bool res = false;
             try

@@ -1,5 +1,6 @@
 ﻿using DataLayer;
 using EntityLayer;
+using LibraryLayer;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -29,5 +30,9 @@ namespace BusinessLayer
             return TaskDAO.Instance.get(id);
         }
 
+        public bool save(ref BaseResult baseResult, Task obj)
+        {
+            return TaskDAO.Instance.save(ref baseResult, obj);
+        }
     }
 }

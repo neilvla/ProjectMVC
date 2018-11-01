@@ -7,13 +7,13 @@
 
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-sm-4">
-        <h2>This is main title</h2>
+        <h2>Usuarios</h2>
         <ol class="breadcrumb">
             <li>
-                <a href="@Url.Action("Dashboard_1", "Dashboards")">This is</a>
+                <a href="@Url.Action("Users", "Private")">Esto es</a>
             </li>
             <li class="active">
-                <strong>Breadcrumb</strong>
+                <strong>Usuarios</strong>
             </li>
         </ol>
     </div>
@@ -23,7 +23,7 @@
         <div class="col-md-12">
             <div class="ibox">
                 <div class="ibox-title">
-                    <h5>Usuarios</h5>
+                    <h5>Listado de Usuarios</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -79,8 +79,8 @@
                                     <td>
                                         @item.UserType.Name
                                     </td>
-                                    <td>
-                                        <img class="img-circle" src="@Url.Content("~/StaticFiles/agroappresource/images/users/" + item.Image)" alt="Image" style="width: 48px; height: 48px" />
+                                    <td class="text-center">
+                                        <img class="img-circle" src="@Url.Content("~/StaticFiles/agroappresource/images/users/" + item.Image)" onerror="this.src='../StaticFiles/agroappresource/images/users/user_default.jpg';" alt="Image" style="width: 48px; height: 48px" />
                                     </td>
                                     <td>
                                         @item.CreatedDate.ToShortDateString()

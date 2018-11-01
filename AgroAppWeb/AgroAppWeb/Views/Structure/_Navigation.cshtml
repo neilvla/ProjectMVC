@@ -43,34 +43,11 @@
             <li class="@Html.IsSelected(controller: "Private", action: "Tasks")">
                 <a asp-controller="Private" asp-action="Tasks"><i class="fa fa-diamond"></i> <span class="nav-label" data-i18n="nav.layouts">Tareas</span></a>
             </li>
-            <li class="@Html.IsSelected(controller: "Tables")">
-                <a href="#"><i class="fa fa-table"></i> <span class="nav-label" data-i18n="nav.tables">Tables</span><span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "Tables", cssClass: "in")">
-                    <li class="@Html.IsSelected(action: "StaticTables")"><a href="@Url.Action("StaticTables", "Tables")">Static Tables</a></li>
-                    <li class="@Html.IsSelected(action: "DataTables")"><a href="@Url.Action("DataTables", "Tables")">Data Tables</a></li>
-                    <li class="@Html.IsSelected(action: "FooTables")"><a href="@Url.Action("FooTables", "Tables")">Foo Table</a></li>
-                    <li class="@Html.IsSelected(action: "jqGrid")"><a href="@Url.Action("jqGrid", "Tables")">jqGrid</a></li>
-                </ul>
+            <li class="@Html.IsSelected(controller: "Private", action: "Illnesses")">
+                <a asp-controller="Private" asp-action="Illnesses"><i class="fa fa-diamond"></i> <span class="nav-label" data-i18n="nav.layouts">Males</span></a>
             </li>
-            <li>
-                <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label" data-i18n="nav.menulevels">Menu Levels </span><span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level">
-                    <li>
-                        <a href="#">Third Level <span class="fa arrow"></span></a>
-                        <ul class="nav nav-third-level">
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Second Level Item</a></li>
-                </ul>
+            <li class="@Html.IsSelected(controller: "Private", action: "ControlSequence")">
+                <a asp-controller="Private" asp-action="Controlsequence"><i class="fa fa-diamond"></i> <span class="nav-label" data-i18n="nav.layouts">Secuencia de Control</span></a>
             </li>
         </ul>
     </div>

@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Image">Imagen</label>
-                                    <input type="hidden" name="Image" value="@myimage">
+                                    <input type="hidden" name="Image" id="imageTemp" value="@myimage">
                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                         <span class="btn btn-default btn-file">
                                             <span class="fileinput-new">Select file</span>
@@ -63,7 +63,7 @@
                                         <option value="2">Inactivo</option>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+                                <button type="submit" id="btnSavePhase" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
                                 <a class="btn btn-default" asp-action="Phases"><i class="fa fa-reply"></i> Regresar</a>
                             </form>
 
@@ -75,3 +75,12 @@
     </div>
 </div>
 
+<script type="text/javascript">
+    $(function () {
+        $("#btnSavePhase").on("click", function () {
+            if ($("#Image").val() != "") {
+                $("#imageTemp").val($("#Image").val().split('\\').pop());
+            }
+        });
+    });
+</script>

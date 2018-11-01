@@ -93,7 +93,7 @@ namespace DataLayer
             return users;
         }
 
-        public bool save(Phase obj)
+        public bool save(ref BaseResult baseResult, Phase obj)
         {
             bool res = false;
             try

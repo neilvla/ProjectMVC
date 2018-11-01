@@ -32,7 +32,7 @@ namespace DataLayer
             throw new NotImplementedException();
         }
 
-        public bool save(Administrator obj)
+        public bool save(ref BaseResult baseResult, Administrator obj)
         {
             throw new NotImplementedException();
         }

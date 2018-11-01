@@ -6,13 +6,13 @@
 
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-sm-4">
-        <h2>This is main title</h2>
+        <h2>Etapas</h2>
         <ol class="breadcrumb">
             <li>
-                <a href="@Url.Action("Dashboard_1", "Dashboards")">This is</a>
+                <a href="@Url.Action("Stages", "Private")">Esto es</a>
             </li>
             <li class="active">
-                <strong>Breadcrumb</strong>
+                <strong>Etapas</strong>
             </li>
         </ol>
     </div>
@@ -22,7 +22,7 @@
         <div class="col-md-12">
             <div class="ibox">
                 <div class="ibox-title">
-                    <h5>Etapas</h5>
+                    <h5>Listado de Etapas</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -66,8 +66,8 @@
                                     <td>
                                         @item.Description
                                     </td>
-                                    <td>
-                                        @item.Image
+                                    <td class="text-center">
+                                        <img class="img-circle" src="@Url.Content("~/StaticFiles/agroappresource/images/stages/" + item.Image)" onerror="this.src='../StaticFiles/agroappresource/images/stages/default-image.png';" alt="Image" style="width: 48px; height: 48px" />
                                     </td>
                                     <td>
                                         @item.CreatedDate.ToShortDateString()

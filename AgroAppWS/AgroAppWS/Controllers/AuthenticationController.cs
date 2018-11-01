@@ -36,18 +36,6 @@ namespace AgroAppWS.Controllers
             };
         }
 
-        [HttpGet("stages")]
-        public ActionResult<Response<Stage>> stages()
-        {
-            BaseResult baseResult = new BaseResult();
-            List<Stage> stages = StageBL.Instance.list();
-            return new Response<Stage>
-            {
-                TypeResult = baseResult.Type,
-                ListResult = stages
-            };
-        }
-
         [HttpGet("getstatuscropcontrol/{userid}")]
         public ActionResult<Response<short>> getStatusCropControlByUser(int userid)
         {
@@ -60,15 +48,16 @@ namespace AgroAppWS.Controllers
                 Result = status
             };
         }
-        [HttpPost("images/upload")]
-        public async Task<string> uploadImage(IFormFile file)
+        [HttpPost("image/upload")]
+        public async Task<IActionResult> Upload(IFormFile file)
         {
-            if (CheckIfImageFile(file))
-            {
-                return await WriteFile(file);
-            }
+            //if (CheckIfImageFile(file))
+            //{
+            //    return await WriteFile(file);
+            //}
 
-            return "Invalid image file";
+            //return "Invalid image file";
+            return Ok();
         }
 
         private bool CheckIfImageFile(IFormFile file)

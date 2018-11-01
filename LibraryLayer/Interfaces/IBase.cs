@@ -8,6 +8,6 @@ namespace LibraryLayer.Interfaces
     {
         T get(int id);
         List<T> list();
-        bool save(T obj);
+        bool save(ref BaseResult baseResult, T obj);
     }
 }

@@ -32,8 +32,7 @@ namespace DataLayer
                 MySqlCommand cmd = new MySqlCommand("User_GetById", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("id", id);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                u = null;
+                MySqlDataReader reader = cmd.ExecuteReader();                
                 if (reader.Read())
                 {
                     UserType ut = new UserType()
@@ -107,7 +106,7 @@ namespace DataLayer
             return users;
         }
 
-        public bool save(User obj)
+        public bool save(ref BaseResult baseResult, User obj)
         {
             bool res = false;
             try
@@ -129,10 +128,9 @@ namespace DataLayer
                 res = true;
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                baseResult = new BaseResult((Int16)Resource.EnumTypeResult.Error, "Ha ocurrido un error", ex);
             }
             return res;
         }

@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "Controlsequence";
+    Layout = "~/Views/Structure/_PrivateLayout.cshtml";
+    IEnumerable<SelectListItem> phases = (IEnumerable<SelectListItem>)ViewData["Phases"];
+    IEnumerable<SelectListItem> stages = (IEnumerable<SelectListItem>)ViewData["Stages"];
+    IEnumerable<SelectListItem> tasks = (IEnumerable<SelectListItem>)ViewData["Tasks"];
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Secuencia de control de cultivo</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="@Url.Action("Dashboard_1", "Dashboards")">Esto es</a>
+            </li>
+            <li class="active">
+                <strong>Secuencia de control</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>Secuencia de control de cultivo</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form asp-action="SaveSequence">
+                                <div class="form-group">
+                                    <label>Fases</label>
+                                    <select class="chosen-select" name="phaseid" asp-items="@phases"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Etapas</label>
+                                    <select class="chosen-select" name="stageid" asp-items="@stages"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tareas</label>
+                                    <select class="chosen-select" name="taskid" asp-items="@tasks"></select>
+                                </div>
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+                                <a class="btn btn-default" asp-action="Controlsequence"><i class="fa fa-reply"></i> Regresar</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
