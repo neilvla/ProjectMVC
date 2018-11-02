@@ -49,6 +49,9 @@
             <li class="@Html.IsSelected(controller: "Private", action: "ControlSequence")">
                 <a asp-controller="Private" asp-action="Controlsequence"><i class="fa fa-diamond"></i> <span class="nav-label" data-i18n="nav.layouts">Secuencia de Control</span></a>
             </li>
+            <li class="@Html.IsSelected(controller: "Private", action: "Incidents")">
+                <a asp-controller="Private" asp-action="Incidents"><i class="fa fa-diamond"></i> <span class="nav-label" data-i18n="nav.layouts">Incidencias</span></a>
+            </li>
         </ul>
     </div>
 </nav>

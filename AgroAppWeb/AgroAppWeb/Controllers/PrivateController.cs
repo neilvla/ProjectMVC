@@ -255,5 +255,52 @@ namespace AgroAppWeb.Controllers
             }
             return newFileName;
         }
+
+        #region INCIDENTES
+
+        [ActionName("Incidents")]
+        public IActionResult IncidentsView()
+        {
+            BaseResult baseResult = new BaseResult();
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            ViewData["admin"] = a;
+            List<Incidence> lstIncidences = IncidenceBL.Instance.list(ref baseResult);
+            return View(lstIncidences);
+        }
+
+        /*public class Dto
+        {
+            public int Id { get; set; }
+        }*/
+        //[HttpPost]
+        public IActionResult DetailIncident(String Id)
+        {
+            BaseResult baseResult = new BaseResult();
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            ViewData["admin"] = a;
+            List<IncidenceDetail> lstDetails = IncidenceBL.Instance.listDetail(ref baseResult, Convert.ToInt32(Id));
+            return Json(lstDetails);
+        }
+
+        [ActionName("IncidentsForm")]
+        public IActionResult IncidentsFormView(int id)
+        {
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            ViewData["admin"] = a;
+            IncidenceResponse incidence = IncidenceBL.Instance.getResponse(id);
+            return View(incidence);
+        }
+
+        public IActionResult IncidentsResponseSave(IncidenceResponse incidence)
+        {
+            BaseResult baseResult = new BaseResult();
+            Administrator a = HttpContext.Session.GetObject<Administrator>("UserSession");
+            incidence.CreatedBy = a.Id;
+
+            IncidenceBL.Instance.save(ref baseResult, incidence);
+            return RedirectToAction("Incidents");
+        }
+
+        #endregion
     }
 }

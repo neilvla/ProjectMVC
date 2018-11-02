@@ -34,5 +34,25 @@ namespace BusinessLayer
         {
             return IncidenceDAO.Instance.listDetail(ref baseResult, incidenceid);
         }
+
+        public List<Incidence> list(ref BaseResult baseResult)
+        {
+            return IncidenceDAO.Instance.list(ref baseResult);
+        }
+
+        public bool save(ref BaseResult baseResult, IncidenceResponse obj)
+        {
+            return IncidenceDAO.Instance.save(ref baseResult, obj);
+        }
+
+        public Incidence get(int id)
+        {
+            return IncidenceDAO.Instance.get(id);
+        }
+
+        public IncidenceResponse getResponse(int id)
+        {
+            return IncidenceDAO.Instance.getResponse(id);
+        }
     }
 }
